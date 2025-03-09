@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A React project",
   "main": "index.js",
-  "homepage": ".",  // ✅ Added this line
+  "homepage": ".", 
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

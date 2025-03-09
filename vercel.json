@@ -1,6 +1,4 @@
-cd path/to/your/frontend  # Navigate to your frontend project
 
-echo '{
   "build": {
     "env": {
       "CI": "false"
@@ -22,4 +20,3 @@ echo '{
       "dest": "/index.html"
     }
   ]
-}' > vercel.json

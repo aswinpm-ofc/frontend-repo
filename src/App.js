@@ -7,9 +7,9 @@ import UserSelection from "./pages/userselectionsection";
 import EnterOtp from "./pages/enterotp";
 import UserSignup from "./pages/usersignup";
 import WorkerSignup from "./pages/workersignup";
-import ScheduleAppointment from "./pages/scheduleappointment"; // ✅ Import the ScheduleAppointment page
-import JobDetails from "./pages/jobdetails"; // ✅ Import the Job Details Page
-
+import WorkerDashboard from "./pages/workerdashboard"; // ✅ Import Worker Dashboard
+import ScheduleAppointment from "./pages/scheduleappointment"; // ✅ Import ScheduleAppointment page
+import JobDetails from "./pages/jobdetails"; // ✅ Import JobDetails page
 
 function App() {
   return (
@@ -23,9 +23,9 @@ function App() {
         <Route path="/enterotp" element={<EnterOtp />} />
         <Route path="/usersignup" element={<UserSignup />} />
         <Route path="/workersignup" element={<WorkerSignup />} />
-        <Route path="/schedule" element={<ScheduleAppointment />} /> {/* ✅ Added this */}
+        <Route path="/workerdashboard" element={<WorkerDashboard />} /> {/* ✅ Worker Dashboard Route */}
+        <Route path="/schedule" element={<ScheduleAppointment />} />
         <Route path="/jobdetails" element={<JobDetails />} />
-
       </Routes>
     </Router>
   );

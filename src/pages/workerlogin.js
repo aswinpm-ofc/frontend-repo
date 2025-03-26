@@ -10,7 +10,7 @@ const WorkerLogin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     alert("Worker login successful!");
-    navigate("/");
+    navigate("/workerdashboard");  // ✅ Redirect to Worker Dashboard
   };
 
   return (

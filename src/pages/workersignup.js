@@ -17,7 +17,7 @@ const WorkerSignup = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     alert("Worker account created successfully!");
-    navigate("/login");
+    navigate("/workerdashboard");  // ✅ Redirect to Worker Dashboard
   };
 
   return (
@@ -29,8 +29,7 @@ const WorkerSignup = () => {
           <input type="text" placeholder="Full Name" required />
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
-          
-          {/* Job Description Field */}
+
           <textarea
             placeholder="Describe your work experience"
             value={jobDescription}
@@ -38,7 +37,6 @@ const WorkerSignup = () => {
             required
           />
 
-          {/* Location Selection */}
           <input
             type="text"
             placeholder="Enter your location"
@@ -47,7 +45,6 @@ const WorkerSignup = () => {
             required
           />
 
-          {/* Document Upload */}
           <input type="file" accept=".pdf,.jpg,.png" onChange={handleDocumentUpload} required />
 
           <button type="submit">Create Worker Account</button>

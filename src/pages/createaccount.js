@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
-import "../styles/createaccount.css"; // ✅ Shared CSS
+import "../styles/createaccount.css"; // Changed to specific CSS file
 
 const CreateAccount = () => {
   const location = useLocation();

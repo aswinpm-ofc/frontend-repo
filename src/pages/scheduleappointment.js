@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "../styles/app.css"; // Ensure CSS is imported
+import "../styles/scheduleappointment.css"; // Ensure CSS is imported
 import { useNavigate } from "react-router-dom";
 
 

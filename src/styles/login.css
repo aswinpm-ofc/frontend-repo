@@ -1,0 +1,122 @@
+/* Login Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b89ae6, #8ec5fc);
+  }
+  
+  /* Glassmorphic Container */
+  .login-container {
+    margin-left: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Login Heading */
+  .login-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgba(50, 50, 50, 0.85);
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Glassy Input Fields */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Placeholder Text */
+  .input-field::placeholder {
+    color: rgba(50, 50, 50, 0.6);
+  }
+  
+  /* Input Hover & Focus */
+  .input-field:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .input-field:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid #ff7eb3;
+  }
+  
+  /* Login Button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Button Hover Effect */
+  .login-button:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Button Click Effect */
+  .login-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Links */
+  .auth-links {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .auth-links a {
+    color: rgba(50, 50, 50, 0.8);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  .auth-links a:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .login-container {
+      margin-left: 0;
+    }
+  }

@@ -1,0 +1,79 @@
+/* Common auth styles for worker login */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding-top: 150px;
+  }
+  
+  .auth-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .auth-form h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .auth-form button:hover {
+    background: linear-gradient(to right, #ff5e8a, #ff4a6d);
+  }
+  
+  .auth-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .auth-links a {
+    text-decoration: none;
+    color: #ff5e8a;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .auth-links a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .auth-container {
+      padding-top: 170px;
+    }
+  
+    .auth-form {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  }

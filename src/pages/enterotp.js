@@ -4,7 +4,7 @@ import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Button from "../components/common/button";
 import Input from "../components/common/input";
-import "../styles/app.css"; // ✅ Ensure correct path
+import "../styles/enterotp.css"; // Changed to specific CSS file
 
 const EnterOtp = () => {
   const [otp, setOtp] = useState("");

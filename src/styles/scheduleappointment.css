@@ -1,0 +1,47 @@
+/* Schedule Appointment Container */
+.schedule-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Calendar Container */
+  .calendar-container {
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  /* Time Slots */
+  .time-slots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  .time-slots button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffcccb;
+    border-radius: 5px;
+  }
+  
+  .time-slots button:hover {
+    background-color: #ff9999;
+  }
+  
+  /* Proceed Button */
+  .proceed-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .proceed-btn:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+  }

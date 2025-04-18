@@ -1,0 +1,51 @@
+/* Container for the OTP page */
+.enter-otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  /* Page title */
+  .enter-otp-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* OTP input field */
+  .enter-otp-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .enter-otp-container input:focus {
+    border-color: #ff69b4;
+  }
+  
+  /* OTP verify button */
+  .enter-otp-container button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .enter-otp-container button:hover {
+    background-color: #ff1493;
+  }

@@ -1,0 +1,19 @@
+/* Worker Signup Specific Styles */
+.auth-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* File input styling */
+  .auth-form input[type="file"] {
+    border: none;
+    background: #fff;
+    padding: 5px;
+    cursor: pointer;
+  }

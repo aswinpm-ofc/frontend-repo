@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import ForgotPasswordForm from "../components/auth/forgotpassword/forgotpasswordform";
-import "../styles/app.css"; // ✅ Ensure correct path
+import "../styles/forgotpassword.css"; // Changed to specific CSS file
 
 const ForgotPassword = () => {
   return (

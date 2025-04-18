@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
-import "../styles/app.css";
+import "../styles/workersignup.css";
 
 const WorkerSignup = () => {
   const navigate = useNavigate();

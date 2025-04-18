@@ -1,0 +1,110 @@
+/* 🎨 Global Styles */
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: white;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  /* ✅ Fixed Header */
+  .header {
+    width: 100%;
+    background: rgba(211, 238, 245, 1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* ✅ Logo Container */
+  .logo-container .logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* ✅ Center Align Search & Login */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* ✅ Search Container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ✅ Search Input */
+  .search-container input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  /* ✅ Search Button */
+  .search-btn {
+    border: none;
+    background: #ff758c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .search-btn:hover {
+    background: #ff4775;
+  }
+  
+  /* ✅ Stylish Login Button */
+  .login-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(to right, #ff5983, #ff4775);
+    transform: scale(1.05);
+  }
+  
+  /* ✅ Mobile Responsive */
+  @media (max-width: 768px) {
+    .header-right {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

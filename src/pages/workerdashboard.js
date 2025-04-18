@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/layout/header";  // ✅ Include Header
 import Footer from "../components/layout/footer";
-import "../styles/app.css";
+import "../styles/workerdashboard.css";
 
 const WorkerDashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false); // ✅ Track menu state

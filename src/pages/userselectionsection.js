@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import UserTypeCard from "../user/usertypecard";
-import "../styles/app.css";
+import "../styles/userselectionsection.css";
 
 const UserSelection = () => {
   const navigate = useNavigate();

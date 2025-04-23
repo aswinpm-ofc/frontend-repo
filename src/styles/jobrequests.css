@@ -1,0 +1,94 @@
+.job-requests-page {
+    padding: 100px 20px 40px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Light pink to soft blue */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .job-requests-page h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .job-request-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+  }
+  
+  .job-request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .job-request-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .job-request-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .job-request-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .job-request-actions button {
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-request-actions .accept-btn {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Soft Blue */
+    color: #003366;
+  }
+  
+  .job-request-actions .accept-btn:hover {
+    background: linear-gradient(to right, #91baff, #addcfb);
+    transform: scale(1.05);
+  }
+  
+  .job-request-actions .reject-btn {
+    background: linear-gradient(to right, #ff758c, #ff7eb3); /* Soft Pink */
+    color: white;
+  }
+  
+  .job-request-actions .reject-btn:hover {
+    background: linear-gradient(to right, #ff5e8a, #ff4a6d);
+    transform: scale(1.05);
+  }
+  
+  .job-request-actions button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .job-request-actions {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .job-request-actions button {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,77 @@
+.profile-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #fdfdfd;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .profile-container h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  
+  .profile-field {
+    margin-bottom: 20px;
+  }
+  
+  .profile-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .profile-value,
+  .profile-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .profile-input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .profile-actions button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-actions .edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .profile-actions .edit-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .profile-actions .save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .profile-actions .save-btn:hover {
+    background-color: #218838;
+  }
+  

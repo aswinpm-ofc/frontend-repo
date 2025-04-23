@@ -10,11 +10,14 @@ import WorkerSignup from "./pages/workersignup";
 import WorkerDashboard from "./pages/workerdashboard"; // ✅ Import Worker Dashboard
 import ScheduleAppointment from "./pages/scheduleappointment"; // ✅ Import ScheduleAppointment page
 import JobDetails from "./pages/jobdetails"; // ✅ Import JobDetails page
+import JobRequests from "./pages/jobrequests";
+import WorkerProfile from "./pages/workerprofile";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/jobrequests" element={<JobRequests />} />
         <Route path="/" element={<Home />} />
         <Route path="/userlogin" element={<UserLogin />} />
         <Route path="/workerlogin" element={<WorkerLogin />} />
@@ -26,6 +29,8 @@ function App() {
         <Route path="/workerdashboard" element={<WorkerDashboard />} /> {/* ✅ Worker Dashboard Route */}
         <Route path="/schedule" element={<ScheduleAppointment />} />
         <Route path="/jobdetails" element={<JobDetails />} />
+        <Route path="/workerprofile" element={<WorkerProfile />} />
+
       </Routes>
     </Router>
   );

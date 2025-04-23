@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../styles/app.css"; // Ensure styles are applied
+import "../styles/jobdetails.css"; // Ensure styles are applied
 
 const JobDetails = () => {
   const location = useLocation();
@@ -9,7 +9,7 @@ const JobDetails = () => {
   const selectedDate = params.get("date");
   const selectedTime = params.get("time");
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // For navigation
   const [jobDescription, setJobDescription] = useState("");
   const [files, setFiles] = useState([]);
   const [locationSelected, setLocationSelected] = useState("");
@@ -39,17 +39,32 @@ const JobDetails = () => {
     setFiles([...event.target.files]);
   };
 
-  // Handle Form Submission
+  // Handle Form Submission (Post Job)
   const handlePostJob = () => {
     if (!coordinates || !jobDescription) {
       alert("Please select your location and enter job details.");
       return;
     }
 
-    alert(`Job Posted Successfully for ${selectedService} on ${selectedDate} at ${selectedTime}\nLocation: ${locationSelected}`);
-    
-    // After submission, navigate to a success page or home
-    navigate("/");
+    const jobDetails = {
+      service: selectedService,
+      date: selectedDate,
+      time: selectedTime,
+      location: locationSelected,
+      description: jobDescription,
+      files,
+      coordinates,
+    };
+
+    // Save job details to localStorage for now
+    let postedJobs = JSON.parse(localStorage.getItem("postedJobs")) || [];
+    postedJobs.push(jobDetails);
+    localStorage.setItem("postedJobs", JSON.stringify(postedJobs));
+
+    alert(`Job Posted Successfully`);
+
+    // Navigate to the home page after posting a job
+    navigate("/"); // Redirect to Home page
   };
 
   return (
@@ -59,14 +74,14 @@ const JobDetails = () => {
         <h2>Service: {selectedService || "Not Selected"}</h2>
         <h3>Date: {selectedDate}</h3>
         <h3>Time: {selectedTime}</h3>
-  
+
         {/* Location Selection */}
         <label>📍 Select Location:</label>
         <button className="location-btn" onClick={handleSelectLocation}>
           {locationSelected ? "Location Selected ✅" : "Choose Your Location"}
         </button>
         {locationSelected && <p className="location-text">{locationSelected}</p>}
-  
+
         {/* Job Description */}
         <label>📝 Job Description:</label>
         <textarea 
@@ -74,23 +89,22 @@ const JobDetails = () => {
           value={jobDescription} 
           onChange={(e) => setJobDescription(e.target.value)}
         />
-  
+
         {/* File Upload */}
         <label>📷 Upload Photos/Videos:</label>
         <input type="file" multiple accept="image/*,video/*" onChange={handleFileChange} className="file-upload"/>
-  
+
         {/* Preview Uploaded Files */}
         <div className="preview-container">
           {files.length > 0 && <p>{files.length} file(s) selected</p>}
         </div>
-  
+
         {/* Post Job Button */}
         <button className="post-job-btn" onClick={handlePostJob}>
           Post Job
         </button>
       </div>
     </div>
-    
   );
 };
 

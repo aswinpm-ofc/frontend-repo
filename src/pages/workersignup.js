@@ -16,8 +16,19 @@ const WorkerSignup = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
+
+    const workerData = {
+      fullName: e.target[0].value,
+      email: e.target[1].value,
+      password: e.target[2].value,
+      jobDescription,
+      location,
+      document: document ? document.name : ""
+    };
+
+    localStorage.setItem("workerProfile", JSON.stringify(workerData));
     alert("Worker account created successfully!");
-    navigate("/workerdashboard");  // ✅ Redirect to Worker Dashboard
+    navigate("/workerdashboard");
   };
 
   return (

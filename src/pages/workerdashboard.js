@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 🧭 Import navigation
-import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
 import "../styles/workerdashboard.css";
 
 const WorkerDashboard = () => {
@@ -23,66 +21,66 @@ const WorkerDashboard = () => {
     setSelectedJob(job); // Set the selected job for details view
   };
 
+  const handleLogout = () => {
+    // Clear localStorage
+    localStorage.removeItem("workerProfile");
+    localStorage.removeItem("acceptedJob");
+
+    // Navigate to homepage
+    navigate("/");
+  };
+
   return (
-    <>
-      {/* ✅ Header */}
-      <Header />
+    <div className="dashboard-container">
+      {/* 🟢 3-Dot Menu Button */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        ⋮
+      </div>
 
-      <div className="dashboard-container">
-        {/* 🟢 3-Dot Menu Button */}
-        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-          ⋮
+      {/* 🟢 Dropdown Menu */}
+      {menuOpen && (
+        <div className="dashboard-actions">
+          <button onClick={() => navigate("/jobrequests")}>
+            View Job Requests
+          </button>
+          <button onClick={() => navigate("/workerprofile")}>Update Profile</button>
+          <button onClick={handleLogout}>Logout</button> {/* Logout Button */}
         </div>
+      )}
 
-        {/* 🟢 Dropdown Menu */}
-        {menuOpen && (
-          <div className="dashboard-actions">
-            <button onClick={() => navigate("/jobrequests")}>
-              View Job Requests
-            </button>
-            <button onClick={() => navigate("/workerprofile")}>Update Profile</button>
-            <button onClick={() => navigate("/logout")}>Logout</button>
-          </div>
-        )}
+      <h1>Welcome to the Worker Dashboard</h1>
+      <p>You can manage your job requests, update your profile, and more.</p>
 
-        <h1>Welcome to the Worker Dashboard</h1>
-        <p>You can manage your job requests, update your profile, and more.</p>
-
-        {/* Display Accepted Jobs */}
-        <h2>Accepted Jobs</h2>
-        <div className="job-list">
-          {acceptedJobs.length === 0 ? (
-            <p>No jobs accepted yet.</p>
-          ) : (
-            acceptedJobs.map((job) => (
-              <div key={job.id} className="job-item">
-                <p>{job.jobTitle} - Client: {job.clientName}</p>
-                <button
-                  className="action-btn"
-                  onClick={() => handleViewDetails(job)} // Handle View Details
-                >
-                  View Details
-                </button>
-              </div>
-            ))
-          )}
-        </div>
-
-        {/* Show job details if a job is selected */}
-        {selectedJob && (
-          <div className="job-details">
-            <h3>Job Details</h3>
-            <p><strong>Job Title:</strong> {selectedJob.jobTitle}</p>
-            <p><strong>Client Name:</strong> {selectedJob.clientName}</p>
-            <p><strong>Description:</strong> {selectedJob.description}</p>
-            {/* Optionally display any additional information like location, time, etc. */}
-          </div>
+      {/* Display Accepted Jobs */}
+      <h2>Accepted Jobs</h2>
+      <div className="job-list">
+        {acceptedJobs.length === 0 ? (
+          <p>No jobs accepted yet.</p>
+        ) : (
+          acceptedJobs.map((job) => (
+            <div key={job.id} className="job-item">
+              <p>{job.jobTitle} - Client: {job.clientName}</p>
+              <button
+                className="action-btn"
+                onClick={() => handleViewDetails(job)} // Handle View Details
+              >
+                View Details
+              </button>
+            </div>
+          ))
         )}
       </div>
 
-      {/* ✅ Footer */}
-      <Footer />
-    </>
+      {/* Show job details if a job is selected */}
+      {selectedJob && (
+        <div className="job-details">
+          <h3>Job Details</h3>
+          <p><strong>Job Title:</strong> {selectedJob.jobTitle}</p>
+          <p><strong>Client Name:</strong> {selectedJob.clientName}</p>
+          <p><strong>Description:</strong> {selectedJob.description}</p>
+        </div>
+      )}
+    </div>
   );
 };
 
